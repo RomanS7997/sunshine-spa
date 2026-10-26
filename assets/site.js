@@ -200,19 +200,6 @@
     });
   }
 
-  /* ---------- KakaoTalk: копируем ID ---------- */
-  $all("[data-kakao-id]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var id = btn.dataset.kakaoId, msg = fmt(T.kakao_copied, { id: id });
-      var done = function () {
-        var old = $(".kakao-toast"); if (old) old.remove();
-        var t = document.createElement("div"); t.className = "kakao-toast"; t.setAttribute("role", "status"); t.textContent = msg;
-        document.body.appendChild(t); setTimeout(function () { t.remove(); }, 5000);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(id).then(done, done); else done();
-    });
-  });
-
   /* ---------- просмотр фото ---------- */
   var lb = $("#lightbox");
   if (lb && lb.showModal) {
