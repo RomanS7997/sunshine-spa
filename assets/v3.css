@@ -130,6 +130,7 @@ p{margin:0;text-wrap:pretty}
 .hero-title{font-size:clamp(2.9rem,6.6vw,5.6rem);line-height:1;color:#fbf5ea}
 .hero-title span,.hero-title em{display:block}
 .hero-title em{color:var(--gold)}
+@media (min-width:960px){:lang(ru) .hero-title{font-size:clamp(2.9rem,6vw,5.1rem)}}
 :lang(ko) .hero-title,:lang(zh) .hero-title{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.2}
 .hero-lead{margin-top:24px;font-size:1.08rem;color:var(--on-dark-muted);max-width:44ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
@@ -227,7 +228,13 @@ html:not(.js) .panel+.panel{margin-top:72px}
 .panel-img img{width:100%;height:100%;object-fit:cover}
 .panel-title{margin-top:22px;font-family:var(--font-head);font-weight:400;font-size:2rem;line-height:1.1}
 .panel-desc{margin-top:10px;color:var(--muted);font-size:.95rem;line-height:1.7}
-@media (max-width:959px){.panel-title{display:none}.panel-media{display:grid;gap:14px}.panel-desc{margin:0}}
+@media (max-width:959px){
+  /* телефон и планшет: фото категории целиком, вертикальной аркой слева, рядом название и описание */
+  .panel-media{display:grid;grid-template-columns:118px minmax(0,1fr);gap:6px 18px;align-items:center}
+  .panel-img{grid-row:span 2;aspect-ratio:3/4;border-radius:999px 999px 14px 14px}
+  .panel-title{margin:0;align-self:end;font-size:1.7rem}
+  .panel-desc{margin:0;align-self:start;font-size:.9rem;line-height:1.6}
+}
 
 .mt,.ml{border-top:1px solid var(--ink)}
 .mt-head,.mt-row{display:grid;grid-template-columns:minmax(0,1fr) repeat(var(--cols),minmax(78px,6.6rem)) 24px;align-items:center;gap:0 10px}
@@ -291,13 +298,21 @@ html:not(.js) .panel+.panel{margin-top:72px}
 /* ---------- отзывы ---------- */
 .reviews{background:var(--cream)}
 .rv-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
-@media (min-width:760px){.rv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1120px){.rv-grid{grid-template-columns:minmax(0,.9fr) repeat(3,minmax(0,1fr))}}
+.rv-list{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:760px){.rv-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1120px){.rv-grid{grid-template-columns:minmax(0,.9fr) minmax(0,3fr)}.rv-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .rv-sum{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:34px 30px;border-radius:var(--radius);background:var(--wood-2);color:var(--on-dark)}
+.rv-sum-txt{display:flex;flex-direction:column;align-items:flex-start;gap:12px;flex:1}
 .rv-num{font-family:'Cormorant Garamond',serif;font-size:4.6rem;line-height:.9;color:var(--gold-hi)}
 .rv-sum p{color:var(--on-dark-muted);font-size:.92rem}
 .rv-sum .link-arrow{margin-top:auto;color:var(--on-dark);font-size:.68rem}
 :lang(ko) .rv-sum .link-arrow,:lang(zh) .rv-sum .link-arrow{font-size:.84rem}
+@media (max-width:1119px){
+  .rv-sum{flex-direction:row;align-items:center;gap:22px;padding:22px 24px}
+  .rv-num{font-size:3.6rem}
+  .rv-sum-txt{gap:6px}
+  .rv-sum .link-arrow{margin-top:6px}
+}
 .rv{position:relative;margin:0;display:flex;flex-direction:column;padding:34px 30px 28px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line)}
 .rv-q{width:34px;height:34px;color:rgba(138,98,48,.35)}
 .rv blockquote{margin:16px 0 24px;font-family:var(--font-head);font-size:1.28rem;line-height:1.5;flex:1}
@@ -413,6 +428,7 @@ html:not(.js) .panel+.panel{margin-top:72px}
 @media (min-width:960px){.book-intro{align-self:center}}
 
 @media (max-width:959px){
+  .intro-media{aspect-ratio:16/9;max-width:560px}
   /* телефон: кнопка записи должна быть видна на первом экране */
   .hero{padding:14px 0 56px}
   .hero-grid{gap:30px}
@@ -434,7 +450,6 @@ html:not(.js) .panel+.panel{margin-top:72px}
   .band-img{object-position:75% center;opacity:1}
   .band::after{background:linear-gradient(180deg,rgba(31,21,14,.2) 0%,rgba(31,21,14,.75) 45%,rgba(31,21,14,.95) 100%)}
   .band-inner{padding-block:200px 56px}
-  .panel-img{aspect-ratio:2/1}
 }
 @media (max-width:759px){
   /* меню на телефоне: одна строка шапки 60/90/120 закреплена сверху, под каждой услугой три цены без рамок */
@@ -454,9 +469,9 @@ html:not(.js) .panel+.panel{margin-top:72px}
   .feat-grid h3{font-size:1.3rem;align-self:end}
   .feat-grid p{margin-top:4px;color:#64554a}
   /* отзывы листаются свайпом */
-  .rv-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-20px;padding:4px 20px 12px;scrollbar-width:none}
-  .rv-grid::-webkit-scrollbar{display:none}
-  .rv-grid>*{flex:0 0 84%;scroll-snap-align:center}
+  .rv-list{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:-20px;padding:4px 20px 12px;scrollbar-width:none}
+  .rv-list::-webkit-scrollbar{display:none}
+  .rv-list>*{flex:0 0 84%;scroll-snap-align:center}
   .rv blockquote{font-size:1.22rem}
 }
 
@@ -479,13 +494,17 @@ html:not(.js) .panel+.panel{margin-top:72px}
 .bg-palm .signature::before,.bg-silk .signature::before{display:none}
 .bg-palm .tex img{opacity:.55;filter:sepia(.35) saturate(.85) brightness(.62) contrast(1.15)}
 .bg-palm .hero .tex::after{background:linear-gradient(90deg,rgba(29,20,13,.9) 0%,rgba(29,20,13,.55) 50%,rgba(29,20,13,.25) 100%)}
-.bg-palm .signature .tex img{transform:scaleX(-1)}
+@media (min-width:960px){.bg-palm .signature .tex img{transform:scaleX(-1)}}
+.bg-palm .tex picture{display:block;width:100%;height:100%}
 .bg-palm .signature .tex::after{background:linear-gradient(270deg,rgba(29,20,13,.92) 0%,rgba(29,20,13,.6) 50%,rgba(29,20,13,.35) 100%)}
 .bg-silk .tex img{opacity:.6;filter:brightness(.42) saturate(.75)}
 .bg-silk .hero .tex::after{background:linear-gradient(90deg,rgba(29,20,13,.88) 0%,rgba(29,20,13,.45) 55%,rgba(29,20,13,.2) 100%)}
 .bg-silk .signature .tex::after{background:rgba(29,20,13,.55)}
 @media (max-width:959px){
-  .bg-palm .hero .tex::after,.bg-silk .hero .tex::after{background:linear-gradient(180deg,rgba(29,20,13,.35) 0%,rgba(29,20,13,.85) 55%,rgba(29,20,13,.92) 100%)}
+  .bg-silk .hero .tex::after{background:linear-gradient(180deg,rgba(29,20,13,.35) 0%,rgba(29,20,13,.85) 55%,rgba(29,20,13,.92) 100%)}
+  /* на телефоне своё вертикальное фото с чёткими тенями пальм: затемняем ровно, чтобы листья читались и за текстом */
+  .bg-palm .tex img{opacity:.62;filter:sepia(.85) saturate(1.25) hue-rotate(-8deg) brightness(.55) contrast(1.25)}
+  .bg-palm .hero .tex::after,.bg-palm .signature .tex::after{background:rgba(29,20,13,.42)}
 }
 
 /* G: солнце сквозь пальмы (нарисованный фон: луч тёплого света и тени пальмовых листьев) */
