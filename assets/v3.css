@@ -845,4 +845,5 @@ html:not(.js) .panel+.panel{margin-top:72px}
 .fc-line{background:#06c755;color:#fff}
 .fc-wechat{background:#07c160;color:#fff}
 .fc-line .ic,.fc-wechat .ic{stroke:#fff;stroke-width:1.6}
+@media (max-width:959px){.fchat{gap:7px}.fc{width:44px;height:44px}.fc .ic{width:22px;height:22px}}
 /* ==== /LINE и WeChat ==== */
