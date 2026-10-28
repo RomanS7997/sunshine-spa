@@ -237,6 +237,19 @@
     });
   });
 
+  /* ---------- WeChat: копируем ID ---------- */
+  $all("[data-wechat-id]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var id = btn.dataset.wechatId, msg = fmt(T.wechat_copied || T.kakao_copied || "{id}", { id: id });
+      var done = function () {
+        var old = $(".kakao-toast"); if (old) old.remove();
+        var t = document.createElement("div"); t.className = "kakao-toast"; t.setAttribute("role", "status"); t.textContent = msg;
+        document.body.appendChild(t); setTimeout(function () { t.remove(); }, 6000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(id).then(done, done); else done();
+    });
+  });
+
   /* ---------- просмотр фото ---------- */
   var lb = $("#lightbox");
   if (lb && lb.showModal) {

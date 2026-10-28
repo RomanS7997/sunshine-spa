@@ -840,3 +840,9 @@ html:not(.js) .panel+.panel{margin-top:72px}
   .t-sunshine .mt-head{font-size:.74rem}
 }
 /* ==== /SunShine ==== */
+
+/* ==== LINE и WeChat ==== */
+.fc-line{background:#06c755;color:#fff}
+.fc-wechat{background:#07c160;color:#fff}
+.fc-line .ic,.fc-wechat .ic{stroke:#fff;stroke-width:1.6}
+/* ==== /LINE и WeChat ==== */
