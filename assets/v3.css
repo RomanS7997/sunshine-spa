@@ -847,3 +847,8 @@ html:not(.js) .panel+.panel{margin-top:72px}
 .fc-line .ic,.fc-wechat .ic{stroke:#fff;stroke-width:1.6}
 @media (max-width:959px){.fchat{gap:7px}.fc{width:44px;height:44px}.fc .ic{width:22px;height:22px}}
 /* ==== /LINE и WeChat ==== */
+
+/* ==== поправки 28.10: запятая в «5,0» на золотом/хромовом тексте, длинное русское слово в заголовке SunShine ==== */
+.t-cosmic .seal-big,.t-mina .seal-big{padding:.04em .04em .2em;margin-bottom:-.16em}
+@media (min-width:960px){.t-sunshine:lang(ru) .hero-title{font-size:clamp(2.6rem,4.3vw,4.2rem)}}
+/* ==== /поправки 28.10 ==== */
