@@ -708,3 +708,135 @@ html:not(.js) .panel+.panel{margin-top:72px}
 
 .dd-note{display:block;margin-top:4px;color:var(--muted);font-size:.92em;line-height:1.5}
 .intro-copy .lead+.lead{margin-top:1.1em}
+
+
+
+/* ==== Cosmic: графит, хром, звёзды (класс t-cosmic) ==== */
+.ticker{position:relative;overflow:hidden;background:var(--wood);border-block:1px solid var(--line-dark);padding:20px 0;color:var(--on-dark)}
+.ticker-track{display:flex;width:max-content;animation:tk-run 42s linear infinite}
+.ticker-run{display:flex;align-items:center;gap:36px;padding-right:36px;font-family:var(--font-head);font-size:clamp(.95rem,1.5vw,1.3rem);
+  letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;line-height:1.3}
+.tk-star{display:block;flex:none;width:13px;height:13px;background:currentColor;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);opacity:.75}
+@keyframes tk-run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+.t-cosmic{--chrome:linear-gradient(100deg,#8b939f 0%,#f6f7f9 18%,#aeb5c0 34%,#ffffff 50%,#7f8793 68%,#e7eaee 84%,#a3aab5 100%);
+  --stars:radial-gradient(1.5px 1.5px at 33.1% 17.2%,rgba(255,255,255,0.35),transparent),radial-gradient(1px 1px at 9.0% 53.4%,rgba(255,255,255,0.9),transparent),radial-gradient(0.9px 0.9px at 7.6% 50.7%,rgba(255,255,255,0.35),transparent),radial-gradient(0.9px 0.9px at 43.6% 9.6%,rgba(255,255,255,0.9),transparent),radial-gradient(0.9px 0.9px at 42.8% 80.7%,rgba(255,255,255,0.5),transparent),radial-gradient(0.9px 0.9px at 62.5% 57.8%,rgba(255,255,255,0.9),transparent),radial-gradient(1px 1px at 58.2% 7.7%,rgba(255,255,255,0.35),transparent),radial-gradient(1.2px 1.2px at 55.4% 15.5%,rgba(255,255,255,0.5),transparent),radial-gradient(1.2px 1.2px at 53.9% 56.7%,rgba(255,255,255,0.5),transparent),radial-gradient(1px 1px at 11.9% 56.7%,rgba(255,255,255,0.6),transparent),radial-gradient(1.2px 1.2px at 11.4% 69.9%,rgba(255,255,255,0.35),transparent),radial-gradient(1.2px 1.2px at 61.4% 49.7%,rgba(255,255,255,0.75),transparent),radial-gradient(1.2px 1.2px at 76.6% 46.8%,rgba(255,255,255,0.6),transparent),radial-gradient(1.5px 1.5px at 30.8% 77.7%,rgba(255,255,255,0.5),transparent),radial-gradient(1.2px 1.2px at 9.9% 31.2%,rgba(255,255,255,0.6),transparent),radial-gradient(0.9px 0.9px at 72.0% 30.1%,rgba(255,255,255,0.35),transparent),radial-gradient(1px 1px at 51.1% 18.5%,rgba(255,255,255,0.5),transparent),radial-gradient(1.5px 1.5px at 91.6% 42.6%,rgba(255,255,255,0.35),transparent),radial-gradient(1.8px 1.8px at 75.4% 56.9%,rgba(255,255,255,0.6),transparent),radial-gradient(1.2px 1.2px at 34.7% 35.9%,rgba(255,255,255,0.9),transparent),radial-gradient(0.9px 0.9px at 78.5% 9.5%,rgba(255,255,255,0.6),transparent),radial-gradient(0.9px 0.9px at 47.5% 65.4%,rgba(255,255,255,0.6),transparent),radial-gradient(1.8px 1.8px at 64.1% 96.4%,rgba(255,255,255,0.75),transparent),radial-gradient(1.5px 1.5px at 29.3% 39.3%,rgba(255,255,255,0.6),transparent),radial-gradient(1px 1px at 4.2% 46.4%,rgba(255,255,255,0.9),transparent),radial-gradient(1.8px 1.8px at 13.2% 8.5%,rgba(255,255,255,0.6),transparent),radial-gradient(1.2px 1.2px at 14.4% 26.3%,rgba(255,255,255,0.75),transparent),radial-gradient(1.2px 1.2px at 9.7% 45.2%,rgba(255,255,255,0.6),transparent),radial-gradient(1.8px 1.8px at 86.8% 80.0%,rgba(255,255,255,0.9),transparent),radial-gradient(1px 1px at 28.7% 42.0%,rgba(255,255,255,0.75),transparent),radial-gradient(1px 1px at 93.9% 17.2%,rgba(255,255,255,0.5),transparent),radial-gradient(1.2px 1.2px at 24.3% 24.9%,rgba(255,255,255,0.9),transparent),radial-gradient(1px 1px at 19.5% 29.5%,rgba(255,255,255,0.75),transparent),radial-gradient(1px 1px at 53.3% 60.3%,rgba(255,255,255,0.5),transparent),radial-gradient(1.2px 1.2px at 68.3% 51.5%,rgba(255,255,255,0.35),transparent),radial-gradient(1.8px 1.8px at 45.8% 84.9%,rgba(255,255,255,0.9),transparent),radial-gradient(0.9px 0.9px at 39.7% 40.5%,rgba(255,255,255,0.75),transparent),radial-gradient(0.9px 0.9px at 62.9% 8.9%,rgba(255,255,255,0.5),transparent),radial-gradient(1.2px 1.2px at 44.3% 13.3%,rgba(255,255,255,0.35),transparent),radial-gradient(1.2px 1.2px at 11.8% 56.3%,rgba(255,255,255,0.35),transparent),radial-gradient(0.9px 0.9px at 93.1% 60.7%,rgba(255,255,255,0.5),transparent),radial-gradient(1px 1px at 61.0% 17.0%,rgba(255,255,255,0.6),transparent),radial-gradient(0.9px 0.9px at 59.8% 47.6%,rgba(255,255,255,0.75),transparent),radial-gradient(1.2px 1.2px at 97.3% 46.8%,rgba(255,255,255,0.6),transparent),radial-gradient(1px 1px at 10.2% 12.6%,rgba(255,255,255,0.6),transparent),radial-gradient(1.2px 1.2px at 47.9% 68.1%,rgba(255,255,255,0.35),transparent)}
+.t-cosmic ::selection{background:#dfe3ea;color:#0b0c0f}
+.t-cosmic .hero-grid{position:relative;z-index:1}
+.t-cosmic .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:var(--stars);
+  background-repeat:no-repeat;background-size:100% 100%;animation:cb-twinkle 7s ease-in-out infinite alternate}
+@media (min-width:960px){.t-cosmic .hero::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 2 2'%3E%3Cpath fill='%23fff' d='M0-1Q.1-.1 1 0Q.1 .1 0 1Q-.1 .1-1 0Q-.1-.1 0-1Z'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 2 2'%3E%3Cpath fill='%23fff' d='M0-1Q.1-.1 1 0Q.1 .1 0 1Q-.1 .1-1 0Q-.1-.1 0-1Z'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 2 2'%3E%3Cpath fill='%23fff' d='M0-1Q.1-.1 1 0Q.1 .1 0 1Q-.1 .1-1 0Q-.1-.1 0-1Z'/%3E%3C/svg%3E"),var(--stars);
+  background-size:22px 22px,13px 13px,9px 9px,100% 100%;background-position:91% 12%,4% 82%,52% 90%,0 0}}
+@keyframes cb-twinkle{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.t-cosmic .hero::before{animation:none}}
+.t-cosmic .signature,.t-cosmic .book{background-image:var(--stars);background-repeat:no-repeat;background-size:100% 100%}
+.t-cosmic .signature{background-color:var(--wood-2)}
+.t-cosmic .book{background-color:var(--wood)}
+.t-cosmic .book::before{background:radial-gradient(45% 55% at 12% 25%,rgba(var(--glow-rgb),.16),transparent 70%),
+  radial-gradient(40% 50% at 95% 90%,rgba(var(--glow2-rgb),.10),transparent 70%)}
+
+/* заголовки: широкий гротеск, выделение хромом */
+.t-cosmic h1,.t-cosmic h2{letter-spacing:-.025em;line-height:1.08}
+.t-cosmic .hero-title{font-size:clamp(2.5rem,5.2vw,4.5rem);line-height:1.04}
+.t-cosmic .hero-title em,.t-cosmic .sig-copy h2 em,.t-cosmic .band h2 em,.t-cosmic .seal-big{
+  background:var(--chrome);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.t-cosmic .hero-title em{font-weight:500;padding-bottom:.2em;margin-bottom:-.2em;animation:cb-sheen 10s ease-in-out infinite alternate}
+@keyframes cb-sheen{from{background-position:0% 50%}to{background-position:100% 50%}}
+@media (prefers-reduced-motion:reduce){.t-cosmic .hero-title em{animation:none}}
+.t-cosmic:lang(ko) .hero-title,.t-cosmic:lang(zh) .hero-title{font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.22;font-weight:500}
+.t-cosmic:lang(ko) h2,.t-cosmic:lang(zh) h2{font-weight:500;line-height:1.28}
+.t-cosmic .intro-copy h2 em{background:linear-gradient(100deg,#1d2027 0%,#6d7480 30%,#262a31 55%,#5b626e 80%,#1d2027 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.t-cosmic .ticker-run span{background:var(--chrome);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.2em;margin-bottom:-.2em}
+.t-cosmic .ticker{background:#060709}
+.t-cosmic .tk-star{background:#cfd4db}
+
+/* подзаголовки: звёздочка вместо линии */
+.t-cosmic .eyebrow::before,.t-cosmic .section-head.center .eyebrow::after{width:10px;height:10px;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);opacity:.9}
+
+/* кнопки и печать «хром» */
+.t-cosmic .btn-gold{background:linear-gradient(180deg,#ffffff 0%,#e4e7ec 55%,#c9ced6 100%);color:#0b0c0f;
+  box-shadow:inset 0 1px 0 #fff,0 12px 32px -14px rgba(var(--glow-rgb),.7)}
+.t-cosmic .btn-gold:hover{background:linear-gradient(180deg,#ffffff 0%,#f1f3f6 60%,#dde1e7 100%);box-shadow:inset 0 1px 0 #fff,0 14px 38px -12px rgba(var(--glow-rgb),.9)}
+.t-cosmic .seal{background:radial-gradient(circle at 30% 25%,#2a2d36,#0b0c0f 72%);border:1px solid rgba(255,255,255,.42);color:#dfe3ea;
+  box-shadow:0 0 0 6px rgba(11,12,15,.55),0 0 46px rgba(var(--glow-rgb),.38),0 20px 40px -18px #000}
+.t-cosmic .seal-big{font-weight:500}
+.t-cosmic .arch{box-shadow:0 50px 90px -40px rgba(0,0,0,.85),0 0 80px -20px rgba(var(--glow-rgb),.35)}
+.t-cosmic .hero-media::before,.t-cosmic .sig-media::after{border-color:rgba(214,219,228,.38)}
+
+/* отзывы и меню: длинный текст обычным шрифтом */
+.t-cosmic .rv blockquote{font-family:var(--font-body);font-size:1.02rem;font-weight:500;line-height:1.7}
+.t-cosmic .rv-q{color:#9aa1ad}
+.t-cosmic .rv-sum{background:radial-gradient(80% 60% at 20% 0%,rgba(var(--glow-rgb),.22),transparent 70%),var(--wood-2)}
+.t-cosmic .mr-name,.t-cosmic .panel-title,.t-cosmic .feat-grid h3{font-weight:400;letter-spacing:-.01em}
+.t-cosmic .feat-ic{border-color:rgba(14,15,19,.22);color:var(--ink);background:linear-gradient(180deg,#fff,#e8eaee)}
+.t-cosmic .tabs button[aria-selected="true"]{box-shadow:0 10px 26px -14px rgba(var(--deep-rgb),.8)}
+.t-cosmic .stat-big{font-weight:400}
+.t-cosmic .footer{background:#060709}
+
+/* полоса с фото на телефоне: снимок сверху своей высоты (без растяжения), текст ниже на графите */
+@media (max-width:759px){
+  .t-cosmic .band{display:block;min-height:0;background:#0b0c0f}
+  .t-cosmic .band-img{position:relative;inset:auto;height:330px;object-position:72% 50%}
+  .t-cosmic .band::after{background:linear-gradient(180deg,rgba(11,12,15,.1) 0,rgba(11,12,15,0) 150px,#0b0c0f 330px)}
+  .t-cosmic .band-inner{margin-top:-64px;padding-block:0 60px}
+}
+@media (max-width:420px){.t-cosmic h2{font-size:clamp(1.6rem,8.2vw,2.1rem)}}
+@media (max-width:599px){
+  .t-cosmic .hero-title{font-size:clamp(2.05rem,9.4vw,2.9rem)}
+  .t-cosmic:lang(ko) .hero-title,.t-cosmic:lang(zh) .hero-title{font-size:clamp(1.9rem,8.6vw,2.6rem)}
+  .ticker{padding:15px 0}
+}
+/* ==== /Cosmic ==== */
+
+/* ==== Mina: крем, золото, арки как на стене салона (класс t-mina) ==== */
+.t-mina{--goldtxt:linear-gradient(100deg,#9c6d2c 0%,#d3aa62 26%,#8a5d22 50%,#c99a4b 74%,#7d5420 100%)}
+.t-mina .hero-grid{position:relative;z-index:1}
+.t-mina .hero::before{content:"";position:absolute;z-index:0;pointer-events:none;left:50%;top:-40px;width:min(1180px,150vw);aspect-ratio:2/1;
+  transform:translateX(-50%);
+  background:repeating-radial-gradient(circle at 50% 100%,transparent 0 70px,rgba(var(--gold-rgb),.26) 71px 72px,transparent 73px 140px);
+  -webkit-mask:radial-gradient(circle at 50% 100%,#000 25%,transparent 71%);mask:radial-gradient(circle at 50% 100%,#000 25%,transparent 71%)}
+@media (min-width:960px){.t-mina .hero::before{left:71%;top:-2%;width:min(1100px,82vw)}}
+.t-mina .hero-title{font-weight:500}
+.t-mina .hero-title em,.t-mina .intro-copy h2 em,.t-mina .seal-big{background:var(--goldtxt);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;padding:0 .12em .22em 0;margin-bottom:-.22em}
+.t-mina .seal{background:#fffaf3;border:1px solid rgba(var(--gold-rgb),.7);color:var(--gold-deep);
+  box-shadow:0 0 0 6px rgba(255,250,243,.7),0 18px 36px -18px rgba(90,60,20,.5)}
+.t-mina .arch{box-shadow:0 40px 70px -40px rgba(70,45,15,.55),0 0 0 1px rgba(var(--gold-rgb),.25)}
+.t-mina .ticker{background:var(--cream);border-color:rgba(var(--gold-rgb),.3);color:var(--gold-deep);padding:16px 0}
+.t-mina .ticker-run{font-family:var(--font-head);font-style:italic;font-weight:500;text-transform:none;letter-spacing:.01em;
+  font-size:clamp(1.25rem,2vw,1.75rem);gap:30px;padding-right:30px}
+.t-mina .ticker-run span{padding-bottom:.2em;margin-bottom:-.2em;background:var(--goldtxt);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.t-mina .tk-star{background:var(--gold);opacity:.7;width:11px;height:11px}
+.t-mina .rv-q{color:rgba(var(--gold-rgb),.75)}
+.t-mina .logo-img{height:72px}
+.t-mina .nav.scrolled .logo-img{height:58px}
+@media (max-width:599px){.t-mina .logo-img{height:54px}.t-mina .nav.scrolled .logo-img{height:48px}}
+/* ==== /Mina ==== */
+
+/* ==== SunShine: её золотой логотип, вывеска первой, крупные услуги и цены (класс t-sunshine) ==== */
+.t-sunshine .logo-img{height:auto;width:clamp(210px,25vw,370px)}
+.t-sunshine .nav.scrolled .logo-img{height:auto;width:clamp(190px,22vw,320px)}
+@media (max-width:599px){.t-sunshine .logo-img,.t-sunshine .nav.scrolled .logo-img{width:min(240px,58vw)}}
+@media (min-width:960px){.t-sunshine .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px}}
+.t-sunshine .arch{aspect-ratio:4/3;border-radius:150px 150px 20px 20px}
+.t-sunshine .hero-media::before{border-radius:156px 156px 24px 24px}
+@media (max-width:959px){.t-sunshine .arch{aspect-ratio:4/3;border-radius:110px 110px 18px 18px}.t-sunshine .hero-media::before{border-radius:114px 114px 22px 22px}}
+.t-sunshine .footer-logo{width:min(230px,60vw);height:auto}
+/* меню: названия и цены крупнее и контрастнее */
+.t-sunshine .tabs button{font-size:1.38rem;font-weight:600}
+.t-sunshine .mt-name{font-size:1.55rem;font-weight:600;color:var(--ink)}
+.t-sunshine .mt-name small{font-size:.9rem;color:var(--muted-strong)}
+.t-sunshine .mt-head{font-size:.76rem;font-weight:700;color:var(--ink)}
+.t-sunshine .mt-p,.t-sunshine .ml-prices span{font-size:1.14rem;font-weight:700;color:var(--gold-deep)}
+.t-sunshine .mt-p.is-empty{color:color-mix(in srgb,var(--muted) 45%,transparent)}
+.t-sunshine .ml-prices em{font-size:.86rem;color:var(--muted-strong)}
+.t-sunshine .panel-title{font-weight:600}
+@media (max-width:759px){
+  .t-sunshine .tabs button{font-size:1.2rem}
+  .t-sunshine .mt-name{font-size:1.34rem}
+  .t-sunshine .mt-row .mt-p{font-size:1.1rem;font-weight:700}
+  .t-sunshine .mt-head{font-size:.74rem}
+}
+/* ==== /SunShine ==== */
